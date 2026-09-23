@@ -1,0 +1,10 @@
+{
+  "width": 128,
+  "height": 64,
+  "name": "deform_swap",
+  "imagePath": "deform_swap_tex.png",
+  "SubTexture": [
+    { "name": "sq0", "x": 0, "y": 0, "width": 64, "height": 64 },
+    { "name": "sq1", "x": 64, "y": 0, "width": 64, "height": 64 }
+  ]
+}

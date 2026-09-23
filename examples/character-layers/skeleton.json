@@ -1,0 +1,15 @@
+{
+  "bones": [
+    { "name": "root", "parent": null, "x": 534, "y": 1330, "rotation": -90, "length": 60, "skin": false },
+    { "name": "spine", "parent": "root", "x": 534, "y": 1270, "rotation": -90, "length": 300 },
+    { "name": "chest", "parent": "spine", "x": 534, "y": 1000, "rotation": -90, "length": 260 },
+    { "name": "head", "parent": "spine", "x": 525, "y": 800, "rotation": -90, "length": 400 },
+    { "name": "hair_l", "parent": "head", "x": 305, "y": 650, "rotation": 64.5, "length": 230 },
+    { "name": "hair_r", "parent": "head", "x": 665, "y": 650, "rotation": 98.5, "length": 200 },
+    { "name": "hair_f", "parent": "head", "x": 484, "y": 543, "rotation": 82, "length": 100 },
+    { "name": "arm_l", "parent": "spine", "x": 300, "y": 850, "rotation": 101.0, "length": 357 },
+    { "name": "arm_r", "parent": "spine", "x": 765, "y": 855, "rotation": 78.9, "length": 352 },
+    { "name": "fore_l", "parent": "root", "x": 232, "y": 1200, "rotation": 48.7, "length": 265 },
+    { "name": "fore_r", "parent": "root", "x": 833, "y": 1200, "rotation": 132.0, "length": 272 }
+  ]
+}

@@ -1,0 +1,25 @@
+# Python
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+
+# Node
+node_modules/
+dist/
+
+# Model weights (downloaded by install.sh / pipeline/fetch_models.py)
+*.onnx
+*.pth
+models/
+.u2net/
+
+# Build + render output (disposable)
+out/
+renderer/out/
+
+# Local env / secrets
+.env
+.env.*
+
+.DS_Store

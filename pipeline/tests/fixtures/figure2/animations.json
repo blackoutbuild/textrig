@@ -1,0 +1,46 @@
+{
+  "demo": {
+    "duration": 2.0,
+    "loop": true,
+    "tracks": [
+      { "bone": "arm", "prop": "rotation",
+        "keys": [
+          { "t": 0.0, "v": 0, "ease": "linear" },
+          { "t": 1.0, "v": 30, "ease": "linear" },
+          { "t": 2.0, "v": 0 }
+        ] },
+      { "piece": "eye", "prop": "display",
+        "keys": [
+          { "t": 0.0, "v": "eye" },
+          { "t": 0.8333333, "v": "eye_closed" },
+          { "t": 1.1666667, "v": "eye" },
+          { "t": 2.0, "v": "eye" }
+        ] },
+      { "piece": "body", "prop": "alpha",
+        "keys": [
+          { "t": 0.0, "v": 1.0, "ease": "linear" },
+          { "t": 1.0, "v": 0.5, "ease": "linear" },
+          { "t": 2.0, "v": 1.0 }
+        ] }
+    ]
+  },
+  "swaponly": {
+    "duration": 1.0,
+    "loop": true,
+    "tracks": [
+      { "piece": "eye", "prop": "display",
+        "keys": [
+          { "t": 0.0, "v": "eye" },
+          { "t": 0.3333333, "v": "eye_closed" },
+          { "t": 0.6666667, "v": "eye" },
+          { "t": 1.0, "v": "eye" }
+        ] },
+      { "piece": "body", "prop": "alpha",
+        "keys": [
+          { "t": 0.0, "v": 1.0, "ease": "linear" },
+          { "t": 0.5, "v": 0.5, "ease": "linear" },
+          { "t": 1.0, "v": 1.0 }
+        ] }
+    ]
+  }
+}

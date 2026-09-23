@@ -1,0 +1,95 @@
+{
+  "frameRate": 24,
+  "name": "deform",
+  "version": "5.5",
+  "compatibleVersion": "5.5",
+  "armature": [
+    {
+      "type": "Armature",
+      "frameRate": 24,
+      "name": "deform",
+      "aabb": { "x": -32, "y": -32, "width": 64, "height": 64 },
+      "bone": [
+        { "name": "root" }
+      ],
+      "slot": [
+        { "name": "square", "parent": "root" }
+      ],
+      "skin": [
+        {
+          "slot": [
+            {
+              "name": "square",
+              "display": [
+                {
+                  "type": "mesh",
+                  "name": "square_mesh",
+                  "width": 64,
+                  "height": 64,
+                  "vertices": [
+                    -32, -32,   0, -32,   32, -32,
+                    -32,   0,   0,   0,   32,   0,
+                    -32,  32,   0,  32,   32,  32
+                  ],
+                  "uvs": [
+                    0.0, 0.0,   0.5, 0.0,   1.0, 0.0,
+                    0.0, 0.5,   0.5, 0.5,   1.0, 0.5,
+                    0.0, 1.0,   0.5, 1.0,   1.0, 1.0
+                  ],
+                  "triangles": [
+                    0, 1, 3,   1, 4, 3,
+                    1, 2, 4,   2, 5, 4,
+                    3, 4, 6,   4, 7, 6,
+                    4, 5, 7,   5, 8, 7
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "animation": [
+        {
+          "duration": 90,
+          "name": "bend",
+          "playTimes": 0,
+          "bone": [
+            {
+              "name": "root",
+              "rotateFrame": [
+                { "duration": 22, "tweenEasing": 0, "rotate": 0 },
+                { "duration": 22, "tweenEasing": 0, "rotate": 5 },
+                { "duration": 23, "tweenEasing": 0, "rotate": 0 },
+                { "duration": 23, "tweenEasing": 0, "rotate": -5 },
+                { "duration": 0, "rotate": 0 }
+              ]
+            }
+          ],
+          "slot": [
+            {
+              "name": "square",
+              "colorFrame": [
+                { "duration": 45, "tweenEasing": 0, "value": { "aM": 100 } },
+                { "duration": 45, "tweenEasing": 0, "value": { "aM": 40 } },
+                { "duration": 0, "value": { "aM": 100 } }
+              ]
+            }
+          ],
+          "ffd": [
+            {
+              "skin": "default",
+              "slot": "square",
+              "name": "square_mesh",
+              "frame": [
+                { "duration": 45, "tweenEasing": 0 },
+                { "duration": 45, "curve": [0.25, 0.1, 0.25, 1.0], "offset": 4, "vertices": [12, -8] },
+                { "duration": 0 }
+              ]
+            }
+          ]
+        }
+      ],
+      "defaultActions": [ { "gotoAndPlay": "bend" } ]
+    }
+  ]
+}

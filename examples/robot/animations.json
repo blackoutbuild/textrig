@@ -1,0 +1,180 @@
+{
+  "idle": {
+    "duration": 4.0,
+    "loop": true,
+    "tracks": [
+      {
+        "bone": "spine",
+        "prop": "rotation",
+        "keys": [
+          {
+            "t": 0.0,
+            "v": 0,
+            "ease": "sineInOut"
+          },
+          {
+            "t": 2.0,
+            "v": 2.5,
+            "ease": "sineInOut"
+          },
+          {
+            "t": 4.0,
+            "v": 0
+          }
+        ]
+      },
+      {
+        "bone": "spine",
+        "prop": "y",
+        "keys": [
+          {
+            "t": 0.0,
+            "v": 0,
+            "ease": "sineInOut"
+          },
+          {
+            "t": 2.0,
+            "v": 9,
+            "ease": "sineInOut"
+          },
+          {
+            "t": 4.0,
+            "v": 0
+          }
+        ]
+      },
+      {
+        "bone": "head",
+        "prop": "rotation",
+        "keys": [
+          {
+            "t": 0.0,
+            "v": 0,
+            "ease": "sineInOut"
+          },
+          {
+            "t": 2.4,
+            "v": -3,
+            "ease": "sineInOut"
+          },
+          {
+            "t": 4.0,
+            "v": 0
+          }
+        ]
+      },
+      {
+        "bone": "arm_l",
+        "prop": "rotation",
+        "keys": [
+          {
+            "t": 0.0,
+            "v": 0,
+            "ease": "sineInOut"
+          },
+          {
+            "t": 2.3,
+            "v": -3,
+            "ease": "sineInOut"
+          },
+          {
+            "t": 4.0,
+            "v": 0
+          }
+        ]
+      },
+      {
+        "bone": "arm_r",
+        "prop": "rotation",
+        "keys": [
+          {
+            "t": 0.0,
+            "v": 0,
+            "ease": "sineInOut"
+          },
+          {
+            "t": 2.3,
+            "v": 3,
+            "ease": "sineInOut"
+          },
+          {
+            "t": 4.0,
+            "v": 0
+          }
+        ]
+      },
+      {
+        "piece": "eye",
+        "prop": "display",
+        "keys": [
+          {
+            "t": 0.0,
+            "v": "eye"
+          },
+          {
+            "t": 1.8,
+            "v": "eye_glow"
+          },
+          {
+            "t": 2.6,
+            "v": "eye"
+          }
+        ]
+      }
+    ]
+  },
+  "wave": {
+    "duration": 2.0,
+    "loop": true,
+    "tracks": [
+      {
+        "bone": "arm_r",
+        "prop": "rotation",
+        "keys": [
+          {
+            "t": 0.0,
+            "v": 0,
+            "ease": "sineInOut"
+          },
+          {
+            "t": 0.6,
+            "v": 110,
+            "ease": "sineInOut"
+          },
+          {
+            "t": 1.0,
+            "v": 90,
+            "ease": "sineInOut"
+          },
+          {
+            "t": 1.4,
+            "v": 110,
+            "ease": "sineInOut"
+          },
+          {
+            "t": 2.0,
+            "v": 0
+          }
+        ]
+      },
+      {
+        "piece": "arm_r",
+        "prop": "order",
+        "keys": [
+          {
+            "t": 0.0,
+            "v": 0
+          },
+          {
+            "t": 0.5,
+            "v": 1
+          },
+          {
+            "t": 1.6,
+            "v": 0
+          }
+        ]
+      }
+    ]
+  }
+}

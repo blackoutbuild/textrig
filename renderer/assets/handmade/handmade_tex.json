@@ -1,0 +1,9 @@
+{
+  "width": 64,
+  "height": 128,
+  "name": "handmade",
+  "imagePath": "handmade_tex.png",
+  "SubTexture": [
+    { "name": "handmade", "x": 0, "y": 0, "width": 64, "height": 128 }
+  ]
+}

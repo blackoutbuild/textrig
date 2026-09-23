@@ -1,0 +1,12 @@
+{
+  "width": 160,
+  "height": 96,
+  "name": "figure2",
+  "imagePath": "figure2_tex.png",
+  "SubTexture": [
+    { "name": "body", "x": 0, "y": 0, "width": 40, "height": 80 },
+    { "name": "arm", "x": 44, "y": 0, "width": 16, "height": 56 },
+    { "name": "eye", "x": 64, "y": 0, "width": 16, "height": 16 },
+    { "name": "eye_closed", "x": 84, "y": 0, "width": 16, "height": 16 }
+  ]
+}

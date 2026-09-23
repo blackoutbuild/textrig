@@ -1,0 +1,12 @@
+{
+  "version": 1,
+  "pieces": [
+    { "name": "body", "type": "rigid", "bone": "root", "fill": "none",
+      "source": { "file": "body.png", "offset": [4, 0] } },
+    { "name": "arm", "type": "rigid", "bone": "arm", "fill": "none",
+      "source": { "file": "arm.png", "offset": [0, 10] } },
+    { "name": "eye", "type": "swap", "bone": "head", "fill": "none",
+      "source": { "file": "eye.png", "offset": [16, 2] },
+      "variants": [ { "name": "eye_closed", "file": "eye_closed.png", "offset": [16, 2] } ] }
+  ]
+}

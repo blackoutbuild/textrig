@@ -1,0 +1,110 @@
+{
+  "frameRate": 24,
+  "name": "figure2",
+  "version": "5.5",
+  "compatibleVersion": "5.5",
+  "armature": [
+    {
+      "type": "Armature",
+      "frameRate": 24,
+      "name": "figure2",
+      "aabb": { "x": -24, "y": -80, "width": 48, "height": 80 },
+      "bone": [
+        { "name": "root" },
+        { "name": "arm", "parent": "root", "transform": { "x": -20, "y": -70 } },
+        { "name": "head", "parent": "root", "transform": { "x": 0, "y": -72 } }
+      ],
+      "slot": [
+        { "name": "body", "parent": "root" },
+        { "name": "arm", "parent": "arm" },
+        { "name": "eye", "parent": "head" }
+      ],
+      "skin": [
+        {
+          "slot": [
+            {
+              "name": "body",
+              "display": [
+                { "name": "body", "transform": { "x": 0, "y": -40 } }
+              ]
+            },
+            {
+              "name": "arm",
+              "display": [
+                { "name": "arm", "transform": { "x": 4, "y": 28 } }
+              ]
+            },
+            {
+              "name": "eye",
+              "display": [
+                { "name": "eye", "transform": { "x": 0, "y": 2 } },
+                { "name": "eye_closed", "transform": { "x": 0, "y": 2 } }
+              ]
+            }
+          ]
+        }
+      ],
+      "animation": [
+        {
+          "duration": 48,
+          "name": "demo",
+          "playTimes": 0,
+          "bone": [
+            {
+              "name": "arm",
+              "rotateFrame": [
+                { "duration": 24, "tweenEasing": 0, "rotate": 0 },
+                { "duration": 24, "tweenEasing": 0, "rotate": 30 },
+                { "duration": 0, "rotate": 0 }
+              ]
+            }
+          ],
+          "slot": [
+            {
+              "name": "eye",
+              "displayFrame": [
+                { "duration": 20, "value": 0 },
+                { "duration": 8, "value": 1 },
+                { "duration": 20, "value": 0 },
+                { "duration": 0, "value": 0 }
+              ]
+            },
+            {
+              "name": "body",
+              "colorFrame": [
+                { "duration": 24, "tweenEasing": 0, "value": { "aM": 100 } },
+                { "duration": 24, "tweenEasing": 0, "value": { "aM": 50 } },
+                { "duration": 0, "value": { "aM": 100 } }
+              ]
+            }
+          ]
+        },
+        {
+          "duration": 24,
+          "name": "swaponly",
+          "playTimes": 0,
+          "slot": [
+            {
+              "name": "eye",
+              "displayFrame": [
+                { "duration": 8, "value": 0 },
+                { "duration": 8, "value": 1 },
+                { "duration": 8, "value": 0 },
+                { "duration": 0, "value": 0 }
+              ]
+            },
+            {
+              "name": "body",
+              "colorFrame": [
+                { "duration": 12, "tweenEasing": 0, "value": { "aM": 100 } },
+                { "duration": 12, "tweenEasing": 0, "value": { "aM": 50 } },
+                { "duration": 0, "value": { "aM": 100 } }
+              ]
+            }
+          ]
+        }
+      ],
+      "defaultActions": [ { "gotoAndPlay": "demo" } ]
+    }
+  ]
+}

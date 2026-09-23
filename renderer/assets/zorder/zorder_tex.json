@@ -1,0 +1,10 @@
+{
+  "width": 80,
+  "height": 40,
+  "name": "zorder",
+  "imagePath": "zorder_tex.png",
+  "SubTexture": [
+    { "name": "back", "x": 0, "y": 0, "width": 40, "height": 40 },
+    { "name": "front", "x": 40, "y": 0, "width": 40, "height": 40 }
+  ]
+}

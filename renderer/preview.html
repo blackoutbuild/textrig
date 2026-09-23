@@ -1,0 +1,52 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8" />
+<title>TextRig preview</title>
+<style>
+  html, body { margin: 0; height: 100%; overflow: hidden; }
+  /* Background modes live on <body>; the Pixi canvas stays transparent. */
+  body.bg-checker {
+    --sq: #c8c8c8;
+    background: repeating-conic-gradient(var(--sq) 0% 25%, #f0f0f0 0% 50%) 0 0 / 32px 32px;
+  }
+  body.bg-dark { background: #1a1a2e; }
+  body.bg-custom { background: var(--custom-bg, #1a1a2e); }
+  canvas { position: absolute; inset: 0; }
+  #panel {
+    position: fixed; top: 12px; left: 12px; z-index: 10;
+    display: flex; flex-wrap: wrap; gap: 10px; align-items: center;
+    padding: 8px 12px; border-radius: 8px;
+    background: rgba(20, 20, 32, 0.85); color: #eee;
+    font: 13px/1.4 system-ui, sans-serif;
+  }
+  #panel label { display: flex; gap: 5px; align-items: center; white-space: nowrap; }
+  #panel select, #panel button, #panel input[type=color] { font: inherit; }
+  #panel button { min-width: 2.2em; }
+  #speedVal { min-width: 3.5em; display: inline-block; }
+  #banner {
+    position: fixed; left: 50%; top: 40%; transform: translate(-50%, -50%); z-index: 9;
+    max-width: 70vw; padding: 16px 20px; border-radius: 8px; white-space: pre-wrap;
+    background: rgba(120, 20, 20, 0.92); color: #fff;
+    font: 14px/1.5 ui-monospace, monospace; display: none;
+  }
+</style>
+</head>
+<body class="bg-checker">
+  <div id="panel">
+    <label>rig <select id="rig"></select></label>
+    <label>anim <select id="anim"></select></label>
+    <button id="playPause" title="space">⏸</button>
+    <button id="step" title="one frame forward (.)">⏭</button>
+    <label>speed <input id="speed" type="range" min="0.25" max="2" step="0.05" value="1" />
+      <span id="speedVal">1.00x</span></label>
+    <label>bg <select id="bg">
+      <option value="checker">checker</option>
+      <option value="dark">dark</option>
+      <option value="custom">color…</option>
+    </select><input id="bgColor" type="color" value="#336699" style="display:none" /></label>
+  </div>
+  <div id="banner"></div>
+  <script type="module" src="/src/previewEntry.ts"></script>
+</body>
+</html>

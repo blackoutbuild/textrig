@@ -1,0 +1,9 @@
+[
+  { "name": "root",  "parent": null,    "x": 455, "y": 720, "rotation": -90, "length": 60,  "skin": false },
+  { "name": "spine", "parent": "root",  "x": 455, "y": 640, "rotation": -90, "length": 220 },
+  { "name": "head",  "parent": "spine", "x": 575, "y": 320, "rotation": -90, "length": 60 },
+  { "name": "arm_l", "parent": "spine", "x": 230, "y": 330, "rotation": 99,  "length": 300 },
+  { "name": "arm_r", "parent": "spine", "x": 700, "y": 330, "rotation": 80,  "length": 300 },
+  { "name": "leg_l", "parent": "root",  "x": 300, "y": 740, "rotation": 90,  "length": 250 },
+  { "name": "leg_r", "parent": "root",  "x": 590, "y": 730, "rotation": 90,  "length": 250 }
+]

@@ -1,0 +1,117 @@
+{
+  "bone": [
+    {
+      "name": "flow_anchor",
+      "parent": "root"
+    }
+  ],
+  "slot": [
+    {
+      "name": "flow",
+      "parent": "root"
+    }
+  ],
+  "skin": [
+    {
+      "name": "flow",
+      "display": [
+        {
+          "type": "path",
+          "name": "flow",
+          "closed": false,
+          "constantSpeed": false,
+          "lengths": [
+            45.218865,
+            90.437729
+          ],
+          "vertexCount": 9,
+          "vertices": [
+            64,
+            100,
+            64,
+            100,
+            67.333333,
+            93.333333,
+            84,
+            73.333333,
+            84,
+            60,
+            84,
+            46.666667,
+            67.333333,
+            26.666667,
+            64,
+            20,
+            64,
+            20
+          ],
+          "weights": [
+            1,
+            3,
+            1.0,
+            1,
+            3,
+            1.0,
+            1,
+            3,
+            1.0,
+            1,
+            3,
+            1.0,
+            1,
+            3,
+            1.0,
+            1,
+            3,
+            1.0,
+            1,
+            3,
+            1.0,
+            1,
+            3,
+            1.0,
+            1,
+            3,
+            1.0
+          ],
+          "slotPose": [
+            1,
+            0,
+            0,
+            1,
+            0,
+            0
+          ],
+          "bonePose": [
+            3,
+            1,
+            0,
+            0,
+            1,
+            64,
+            100
+          ]
+        }
+      ]
+    }
+  ],
+  "path": [
+    {
+      "name": "flow",
+      "target": "flow",
+      "targetDisplay": "flow",
+      "bones": [
+        "c1",
+        "c2"
+      ],
+      "positionMode": "percent",
+      "spacingMode": "length",
+      "rotateMode": "chain",
+      "position": 0,
+      "spacing": 0,
+      "rotateOffset": 0,
+      "rotateMix": 1,
+      "translateMix": 1
+    }
+  ]
+}

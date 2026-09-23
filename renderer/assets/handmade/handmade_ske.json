@@ -1,0 +1,63 @@
+{
+  "frameRate": 24,
+  "name": "handmade",
+  "version": "5.5",
+  "compatibleVersion": "5.5",
+  "armature": [
+    {
+      "type": "Armature",
+      "frameRate": 24,
+      "name": "handmade",
+      "aabb": { "x": -32, "y": -128, "width": 64, "height": 128 },
+      "bone": [
+        { "name": "root" },
+        { "name": "upper", "parent": "root", "transform": { "x": 0, "y": -64 } }
+      ],
+      "slot": [
+        { "name": "body", "parent": "root" }
+      ],
+      "skin": [
+        {
+          "slot": [
+            {
+              "name": "body",
+              "display": [
+                {
+                  "type": "mesh",
+                  "name": "handmade",
+                  "width": 64,
+                  "height": 128,
+                  "vertices": [-32, 0, 0, 0, 32, 0, -32, -64, 0, -64, 32, -64, -32, -128, 0, -128, 32, -128],
+                  "uvs": [0, 1, 0.5, 1, 1, 1, 0, 0.5, 0.5, 0.5, 1, 0.5, 0, 0, 0.5, 0, 1, 0],
+                  "triangles": [0, 1, 4, 0, 4, 3, 1, 2, 5, 1, 5, 4, 3, 4, 7, 3, 7, 6, 4, 5, 8, 4, 8, 7],
+                  "weights": [1, 0, 1, 1, 0, 1, 1, 0, 1, 2, 0, 0.5, 1, 0.5, 2, 0, 0.5, 1, 0.5, 2, 0, 0.5, 1, 0.5, 1, 1, 1, 1, 1, 1, 1, 1, 1],
+                  "slotPose": [1, 0, 0, 1, 0, 0],
+                  "bonePose": [0, 1, 0, 0, 1, 0, 0, 1, 1, 0, 0, 1, 0, -64]
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "animation": [
+        {
+          "duration": 48,
+          "name": "bend",
+          "bone": [
+            {
+              "name": "upper",
+              "rotateFrame": [
+                { "duration": 12, "tweenEasing": 0, "rotate": 0 },
+                { "duration": 12, "tweenEasing": 0, "rotate": 25 },
+                { "duration": 12, "tweenEasing": 0, "rotate": 0 },
+                { "duration": 12, "tweenEasing": 0, "rotate": -25 },
+                { "duration": 0, "rotate": 0 }
+              ]
+            }
+          ]
+        }
+      ],
+      "defaultActions": [ { "gotoAndPlay": "bend" } ]
+    }
+  ]
+}

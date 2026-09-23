@@ -1,0 +1,29 @@
+{
+  "width": 36,
+  "height": 12,
+  "name": "path-weighted",
+  "imagePath": "path-weighted_tex.png",
+  "SubTexture": [
+    {
+      "name": "seg1",
+      "x": 0,
+      "y": 0,
+      "width": 12,
+      "height": 12
+    },
+    {
+      "name": "seg2",
+      "x": 12,
+      "y": 0,
+      "width": 12,
+      "height": 12
+    },
+    {
+      "name": "seg3",
+      "x": 24,
+      "y": 0,
+      "width": 12,
+      "height": 12
+    }
+  ]
+}

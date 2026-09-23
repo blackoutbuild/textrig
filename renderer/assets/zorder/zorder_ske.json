@@ -1,0 +1,54 @@
+{
+  "frameRate": 30,
+  "name": "zorder",
+  "version": "5.5",
+  "compatibleVersion": "5.5",
+  "armature": [
+    {
+      "type": "Armature",
+      "frameRate": 30,
+      "name": "zorder",
+      "aabb": { "x": 10, "y": 10, "width": 60, "height": 60 },
+      "bone": [
+        { "name": "root" }
+      ],
+      "slot": [
+        { "name": "back", "parent": "root" },
+        { "name": "front", "parent": "root" }
+      ],
+      "skin": [
+        {
+          "slot": [
+            {
+              "name": "back",
+              "display": [
+                { "name": "back", "transform": { "x": 30, "y": 30 } }
+              ]
+            },
+            {
+              "name": "front",
+              "display": [
+                { "name": "front", "transform": { "x": 50, "y": 50 } }
+              ]
+            }
+          ]
+        }
+      ],
+      "animation": [
+        {
+          "duration": 60,
+          "name": "flip",
+          "playTimes": 0,
+          "zOrder": {
+            "frame": [
+              { "duration": 15 },
+              { "duration": 30, "zOrder": [0, 1] },
+              { "duration": 15 }
+            ]
+          }
+        }
+      ],
+      "defaultActions": [ { "gotoAndPlay": "flip" } ]
+    }
+  ]
+}

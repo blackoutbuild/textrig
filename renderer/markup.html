@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8" />
+<title>TextRig — markup review</title>
+<style>
+  :root { color-scheme: dark; }
+  * { box-sizing: border-box; }
+  body { margin: 0; display: flex; height: 100vh; background: #16181d;
+         color: #cfd3dc; font: 13px/1.45 system-ui, sans-serif; }
+  /* min-width/height 0: the canvas BITMAP size (set from clientWidth in resize())
+     must not feed back into flex layout as min-content, or the panel gets pushed
+     off-screen and the layout grows on every resize. */
+  #canvas { flex: 1; min-width: 0; min-height: 0; display: block; cursor: crosshair; }
+  #panel { width: 270px; padding: 12px; background: #1d2027; overflow-y: auto;
+           display: flex; flex-direction: column; gap: 10px;
+           border-left: 1px solid #2a2e37; }
+  h1 { font-size: 14px; margin: 0; }
+  fieldset { border: 1px solid #2a2e37; border-radius: 6px; padding: 8px; margin: 0; }
+  legend { padding: 0 4px; color: #8b93a3; }
+  label { display: flex; gap: 6px; align-items: center; }
+  button { background: #2a2e37; color: #cfd3dc; border: 1px solid #3a3f4b;
+           border-radius: 6px; padding: 6px 10px; cursor: pointer; }
+  button.active { background: #3d5afe; border-color: #3d5afe; color: #fff; }
+  button:disabled { opacity: .45; cursor: default; }
+  #done { background: #2e7d32; border-color: #2e7d32; color: #fff; }
+  textarea { width: 100%; min-height: 70px; background: #16181d; color: #cfd3dc;
+             border: 1px solid #2a2e37; border-radius: 6px; padding: 6px; resize: vertical; }
+  #status { color: #8b93a3; min-height: 32px; white-space: pre-wrap; }
+  #toast { position: fixed; left: 16px; bottom: 16px; max-width: 40em;
+           background: #b71c1c; color: #fff; padding: 8px 12px; border-radius: 6px;
+           opacity: 0; transition: opacity .2s; pointer-events: none; }
+  #toast.show { opacity: 1; }
+  .hint { color: #6b7280; font-size: 12px; }
+</style>
+</head>
+<body>
+<canvas id="canvas"></canvas>
+<div id="panel">
+  <h1 id="title">markup</h1>
+  <fieldset><legend>layers</legend>
+    <label><input type="checkbox" id="layer-skel" checked /> skeleton</label>
+    <label><input type="checkbox" id="layer-cuts" checked /> cuts</label>
+  </fieldset>
+  <fieldset><legend>tool</legend>
+    <div style="display:flex; gap:6px">
+      <button id="tool-edit" class="active">edit (V)</button>
+      <button id="tool-cut">cut (C)</button>
+    </div>
+    <button id="trace-sil">reset pieces → clean silhouette</button>
+    <div id="sel-piece" class="hint">no piece selected</div>
+    <button id="del-piece">delete selected piece</button>
+    <div class="hint">wheel — zoom · empty space — pan ·
+      ring at a bone tip — drag the tip (rotation + length) ·
+      dblclick on a bone — new joint (chain: drag the knee and both
+      segments bend, Alt-drag — detach) ·
+      Alt-drag — move a single vertex · dblclick on an edge — add vertex ·
+      Del — delete vertex · cut — BRUSH: press and drag, release =
+      cut (start and end outside the piece — through-cut; inside — island loop;
+      Esc — cancel stroke, V — leave cut mode)</div>
+  </fieldset>
+  <fieldset><legend>note to the agent</legend>
+    <textarea id="note" placeholder="structural wishes: &quot;add a bone to the tail&quot;, …"></textarea>
+  </fieldset>
+  <button id="reset">reset edits</button>
+  <button id="done">Done — send to the agent</button>
+  <div id="status"></div>
+</div>
+<div id="toast"></div>
+<script type="module" src="/src/markup/editor.ts"></script>
+</body>
+</html>

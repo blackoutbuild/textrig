@@ -1,0 +1,14 @@
+{
+  "flip": {
+    "duration": 2.0,
+    "loop": true,
+    "tracks": [
+      { "piece": "back", "prop": "order",
+        "keys": [
+          { "t": 0.0, "v": 0 },
+          { "t": 0.5, "v": 1 },
+          { "t": 1.5, "v": 0 }
+        ] }
+    ]
+  }
+}

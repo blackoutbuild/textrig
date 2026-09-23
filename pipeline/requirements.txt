@@ -1,0 +1,6 @@
+numpy>=1.26
+pillow>=12.0
+pytest>=8.0
+scipy>=1.11
+rembg[cpu]>=2.0
+opencv-python-headless>=4.9

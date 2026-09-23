@@ -1,0 +1,9 @@
+{
+  "version": 1,
+  "pieces": [
+    { "name": "back", "type": "rigid", "bone": "root",
+      "source": { "polygon": [[10, 10], [50, 10], [50, 50], [10, 50]] } },
+    { "name": "front", "type": "rigid", "bone": "root",
+      "source": { "polygon": [[30, 30], [70, 30], [70, 70], [30, 70]] } }
+  ]
+}

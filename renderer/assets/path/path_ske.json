@@ -1,0 +1,107 @@
+{
+  "frameRate": 30,
+  "name": "path",
+  "version": "5.5",
+  "compatibleVersion": "5.5",
+  "armature": [
+    {
+      "type": "Armature",
+      "frameRate": 30,
+      "name": "path",
+      "aabb": { "x": 0, "y": 0, "width": 128, "height": 128 },
+      "bone": [
+        { "name": "root", "transform": { "x": 64, "y": 100 } },
+        { "name": "c1", "parent": "root", "length": 20, "transform": { "skX": -90, "skY": -90 } },
+        { "name": "c2", "parent": "c1", "length": 20, "transform": { "x": 20 } },
+        { "name": "c3", "parent": "c2", "length": 20, "transform": { "x": 20 } },
+        { "name": "pathBone", "parent": "root" }
+      ],
+      "slot": [
+        { "name": "seg1", "parent": "c1" },
+        { "name": "seg2", "parent": "c2" },
+        { "name": "seg3", "parent": "c3" },
+        { "name": "flowPath", "parent": "root" }
+      ],
+      "skin": [
+        {
+          "slot": [
+            { "name": "seg1", "display": [ { "name": "seg1" } ] },
+            { "name": "seg2", "display": [ { "name": "seg2" } ] },
+            { "name": "seg3", "display": [ { "name": "seg3" } ] },
+            {
+              "name": "flowPath",
+              "display": [
+                {
+                  "type": "path",
+                  "name": "flowPath",
+                  "closed": false,
+                  "constantSpeed": false,
+                  "lengths": [45.413502, 90.827003],
+                  "vertexCount": 9,
+                  "vertices": [
+                    56, 116,
+                    64, 100,
+                    72, 84,
+                    84, 76,
+                    84, 60,
+                    84, 44,
+                    72, 36,
+                    64, 20,
+                    56, 4
+                  ],
+                  "weights": [
+                    1, 4, 1,
+                    1, 4, 1,
+                    1, 4, 1,
+                    1, 4, 1,
+                    1, 4, 1,
+                    1, 4, 1,
+                    1, 4, 1,
+                    1, 4, 1,
+                    1, 4, 1
+                  ],
+                  "slotPose": [1, 0, 0, 1, 0, 0],
+                  "bonePose": [4, 1, 0, 0, 1, 64, 100]
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "path": [
+        {
+          "name": "flow",
+          "target": "flowPath",
+          "targetDisplay": "flowPath",
+          "bones": ["c1", "c2", "c3"],
+          "positionMode": "percent",
+          "spacingMode": "length",
+          "rotateMode": "chain",
+          "position": 0,
+          "spacing": 0,
+          "rotateOffset": 0,
+          "rotateMix": 1,
+          "translateMix": 1
+        }
+      ],
+      "animation": [
+        {
+          "duration": 60,
+          "name": "sway",
+          "playTimes": 0,
+          "bone": [
+            {
+              "name": "root",
+              "rotateFrame": [
+                { "duration": 30, "tweenEasing": 0, "rotate": -15 },
+                { "duration": 30, "tweenEasing": 0, "rotate": 15 },
+                { "duration": 0, "rotate": -15 }
+              ]
+            }
+          ]
+        }
+      ],
+      "defaultActions": [ { "gotoAndPlay": "sway" } ]
+    }
+  ]
+}

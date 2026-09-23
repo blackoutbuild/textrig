@@ -1,0 +1,246 @@
+{
+  "version": 1,
+  "_comment": [
+    "Draw order = list order, back to front.",
+    "Every piece is a hand-separated layer (cropped to its bounds; offset = its",
+    "top-left corner on the 1008x1792 canvas). \"fill\": \"none\" on every piece",
+    "keeps the drawn art under each overlap instead of repainting it, and the",
+    "build runs with --underlap 0 because the layers are already complete."
+  ],
+  "pieces": [
+    {
+      "name": "hair_back",
+      "type": "deform",
+      "fill": "none",
+      "source": {
+        "file": "layers/hair_back.png",
+        "offset": [216, 240]
+      },
+      "bones": [
+        "head",
+        "hair_l",
+        "hair_r"
+      ],
+      "mesh": {
+        "cols": 16
+      }
+    },
+    {
+      "name": "body",
+      "type": "deform",
+      "fill": "none",
+      "source": {
+        "file": "layers/body.png",
+        "offset": [336, 751]
+      },
+      "bones": [
+        "spine",
+        "chest"
+      ],
+      "mesh": {
+        "cols": 14
+      }
+    },
+    {
+      "name": "arm_r",
+      "bone": "arm_r",
+      "type": "rigid",
+      "fill": "none",
+      "source": {
+        "file": "layers/arm_r.png",
+        "offset": [515, 738]
+      }
+    },
+    {
+      "name": "arm_l",
+      "bone": "arm_l",
+      "type": "rigid",
+      "fill": "none",
+      "source": {
+        "file": "layers/arm_l.png",
+        "offset": [157, 696]
+      }
+    },
+    {
+      "name": "collar",
+      "type": "deform",
+      "fill": "none",
+      "source": {
+        "file": "layers/collar.png",
+        "offset": [434, 711]
+      },
+      "bones": [
+        "spine",
+        "chest"
+      ],
+      "mesh": {
+        "cols": 8
+      }
+    },
+    {
+      "name": "shirt_front",
+      "type": "deform",
+      "fill": "none",
+      "source": {
+        "file": "layers/shirt_front.png",
+        "offset": [315, 791]
+      },
+      "bones": [
+        "spine",
+        "chest"
+      ],
+      "mesh": {
+        "cols": 14
+      }
+    },
+    {
+      "name": "fore_r",
+      "bone": "fore_r",
+      "type": "rigid",
+      "fill": "none",
+      "source": {
+        "file": "layers/fore_r.png",
+        "offset": [556, 1129]
+      }
+    },
+    {
+      "name": "fore_l",
+      "bone": "fore_l",
+      "type": "rigid",
+      "fill": "none",
+      "source": {
+        "file": "layers/fore_l.png",
+        "offset": [149, 1147]
+      }
+    },
+    {
+      "name": "head",
+      "bone": "head",
+      "type": "rigid",
+      "fill": "none",
+      "source": {
+        "file": "layers/head.png",
+        "offset": [319, 322]
+      }
+    },
+    {
+      "name": "hair",
+      "type": "deform",
+      "fill": "none",
+      "source": {
+        "file": "layers/hair.png",
+        "offset": [216, 240]
+      },
+      "bones": [
+        "head",
+        "hair_l",
+        "hair_r"
+      ],
+      "mesh": {
+        "cols": 16
+      }
+    },
+    {
+      "name": "cig",
+      "bone": "head",
+      "type": "swap",
+      "fill": "none",
+      "source": {
+        "file": "layers/cig1.png",
+        "offset": [523, 732]
+      },
+      "variants": [
+        {
+          "name": "cig2",
+          "file": "layers/cig2.png",
+          "offset": [522, 728]
+        },
+        {
+          "name": "cig3",
+          "file": "layers/cig3.png",
+          "offset": [454, 731]
+        }
+      ]
+    },
+    {
+      "name": "brow_l",
+      "bone": "head",
+      "type": "rigid",
+      "fill": "none",
+      "source": {
+        "file": "layers/brow_l.png",
+        "offset": [355, 571]
+      }
+    },
+    {
+      "name": "brow_r",
+      "bone": "head",
+      "type": "rigid",
+      "fill": "none",
+      "source": {
+        "file": "layers/brow_r.png",
+        "offset": [525, 548]
+      }
+    },
+    {
+      "name": "eye_l",
+      "bone": "head",
+      "type": "swap",
+      "fill": "none",
+      "source": {
+        "file": "layers/eye_l_half.png",
+        "offset": [346, 596]
+      },
+      "variants": [
+        {
+          "name": "eye_l_closed",
+          "file": "layers/eye_l_closed.png",
+          "offset": [343, 582]
+        }
+      ]
+    },
+    {
+      "name": "eye_r",
+      "bone": "head",
+      "type": "swap",
+      "fill": "none",
+      "source": {
+        "file": "layers/eye_r_half.png",
+        "offset": [525, 566]
+      },
+      "variants": [
+        {
+          "name": "eye_r_closed",
+          "file": "layers/eye_r_closed.png",
+          "offset": [509, 552]
+        }
+      ]
+    },
+    {
+      "name": "hair_strand",
+      "type": "deform",
+      "fill": "none",
+      "source": {
+        "file": "layers/hair_strand.png",
+        "offset": [348, 329]
+      },
+      "bones": [
+        "head",
+        "hair_f"
+      ],
+      "mesh": {
+        "cols": 24
+      }
+    },
+    {
+      "name": "hairpin",
+      "bone": "head",
+      "type": "rigid",
+      "fill": "none",
+      "source": {
+        "file": "layers/hairpin.png",
+        "offset": [612, 454]
+      }
+    }
+  ]
+}
