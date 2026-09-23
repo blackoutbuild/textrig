@@ -2,7 +2,7 @@
 
 **Animate a single flat PNG with your AI agent.** No PSD layers required, no
 pre-cut parts, no Spine license. You hand your agent an image and a sentence ("make
-the robot wave", "gentle idle breathing"). Using TextRig's MCP tools, the agent
+the character breathe", "a sleepy idle"). Using TextRig's MCP tools, the agent
 cuts the image into pieces, places bones, writes keyframes, renders the result,
 checks its own work against a checklist and iterates.
 

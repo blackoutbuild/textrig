@@ -7,7 +7,7 @@ Each folder holds a source image plus the markup an agent would pass to
 |---|---|---|
 | `manager/` | multi-piece, polygon-cut (10 pieces, 12 bones) | one flat PNG cut into limbs, a `deform` torso on `spine` + `chest` for breathing, `"fill": "none"` on pieces that reach past their seam, `--underlap 18`; animations `idle`, `idle_2`, `idle_3` |
 | `character-layers/` | multi-piece from file layers (17 pieces, 11 bones) | a hand-separated layered export used as-is: every piece is a `source.file` layer with `"fill": "none"`, built with `--underlap 0`; `deform` hair and torso, `swap` eyelids and cigarette; 11 animations (`idle`, `doze`, `drowsy1`–`3`, `falling`, `asleep`, `wake`, `perk`, `stir`, `stir2`) |
-| `robot/` | multi-piece (7 pieces) | rigid limbs, a `deform` hose bridging two bones, an eye-glow `swap` variant, an `order` track in `wave` |
+| `robot/` | multi-piece (7 pieces) | rigid limbs, a `deform` hose bridging two bones, an eye-glow `swap` variant |
 
 Build and render them from the repo root:
 

@@ -271,14 +271,6 @@ more. E.g. a wave — an arm crossing the torso for the middle of a 2s loop:
   "keys": [{ "t": 0.0, "v": 0 }, { "t": 0.5, "v": 1 }, { "t": 1.6, "v": 0 }] }
 ```
 
-Worked example: `examples/robot/animations.json` `wave` — arm_r raises across
-the body (rotation +110) while this exact order track lifts it +1 (from slot 5
-to 6, above the `eye` at slot 6) for the crossing window, then drops back on the
-descent so the eye returns on top. Probe confirms it: the eye-centre pixel reads
-magenta at rest, brown (arm on top) through the `v:1` window, magenta again once
-it returns to `v:0` — the occlusion tracks the order key, not just the arm's
-position.
-
 Two authoring hazards, both writer-fatal (`pipeline/dragonbones_writer.py
 build_zorder_frames`), quoted so you recognize them from the error text:
 
