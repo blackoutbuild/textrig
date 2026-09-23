@@ -12,27 +12,27 @@ and others.
 
 **One flat drawing, no layers.** The source is a single 896×1200 PNG. The
 markup draws 10 polygons over it; `build_rig` cuts the pieces, fills the art
-hidden behind moving joints and binds everything to 12 bones:
+hidden behind moving joints and binds everything to 12 bones (clips below play
+at 2× the authored speed, as in our game):
 
 | Source PNG | `idle` | `idle_2` |
 |---|---|---|
-| ![manager source](docs/media/manager-source.png) | ![manager idle](docs/media/manager-idle.gif) | ![manager idle_2](docs/media/manager-idle_2.gif) |
+| ![manager source](docs/media/manager-source.png) | ![manager idle](docs/media/manager-idle.webp) | ![manager idle_2](docs/media/manager-idle_2.webp) |
 
 **Already have layers? TextRig uses them as pieces.** This character came as
 a hand-separated layered export. Its 21 layer PNGs became 17 pieces plus 4
 swap variants (closed eyelids, cigarette positions), with no cutting and no
 fill (`"fill": "none"`, `--underlap 0`):
 
-| Layers | `idle` | `doze` |
-|---|---|---|
-| ![character layers](docs/media/character-layers-layers.png) | ![layered character idle](docs/media/character-layers-idle.gif) | ![layered character doze](docs/media/character-layers-doze.gif) |
+| Layers | `idle` |
+|---|---|
+| ![character layers](docs/media/character-layers-layers.png) | ![layered character idle](docs/media/character-layers-idle.webp) |
 
-A smaller multi-piece example with a deform hose, a glow swap and a draw-order
-change:
+A smaller multi-piece example with rigid limbs and a deform hose:
 
-| Source PNG | `idle` | `wave` |
-|---|---|---|
-| ![robot source](docs/media/robot-source.png) | ![robot idle](docs/media/robot-idle.gif) | ![robot wave](docs/media/robot-wave.gif) |
+| Source PNG | `idle` |
+|---|---|
+| ![robot source](docs/media/robot-source.png) | ![robot idle](docs/media/robot-idle.webp) |
 
 Every animation above was built by the tools in this repo from the markup in
 [`examples/`](examples/) ([`manager/`](examples/manager/),
@@ -151,7 +151,7 @@ The same pipeline runs from the shell:
 pipeline/build_rig.sh robot examples/robot/source.png \
   examples/robot/skeleton.json examples/robot/animations.json \
   --pieces examples/robot/pieces.json
-(cd renderer && pnpm render out:robot wave robot --match-runtime --frames 8 --size 256 --gif --out-repo)
+(cd renderer && pnpm render out:robot idle robot --match-runtime --frames 8 --size 256 --gif --out-repo)
 (cd renderer && pnpm preview robot)   # live preview at http://localhost:3020
 ```
 
